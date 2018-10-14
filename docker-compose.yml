@@ -3,12 +3,12 @@ services:
     sqlite:
         image: webdevnicolasfourcade/sqlite3:latest
         container_name: sqlite-db
-        ports:
-            - "3306:3306"
-        expose:
-            - "3306"
         environment:
             SQLITE_ROOT_PASSWORD: password
+        stdin_open: true
+        tty: true
+        volumes:
+            - ./db/:/root/db/
     site:
         image: webdevnicolasfourcade/ubuntu-php7.1:latest
         container_name: web
