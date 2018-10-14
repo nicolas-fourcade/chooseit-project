@@ -5,7 +5,7 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
-
+/templates
 ###> symfony/phpunit-bridge ###
 .phpunit
 /phpunit.xml
